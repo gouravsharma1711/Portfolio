@@ -1,0 +1,9 @@
+export { default as NavBar } from './NavBar/NavBar';
+export { default as Home } from './Home/Home';
+export { default as About } from './About/About';
+export { default as Education } from './Education/Education';
+export { default as Achievements } from './Achievements/Achievements';
+export { default as LinkedIn } from './LinkedIn/LinkedIn';
+export { default as GitHub } from './GitHub/GitHub';
+export { default as Contact } from './Contacts/Contacts';
+export { default as PageNotFound } from './PageNotFound/PageNotFound';
