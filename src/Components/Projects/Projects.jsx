@@ -4,19 +4,19 @@ const projects = [
   {
     title: "Video Sharing Website",
     description: "Developed a complete video platform from scratch where users can sign up, create channels, upload videos, and manage their personal dashboard. Features include commenting, liking, and subscribing to channels. Fully functional with secure code practices and a responsive design",
-    image: "../../../public/other/videosharingWeb.png",
+    image: "./other/videosharingWeb.png",
     link: "https://videosharingplatformfrontend.onrender.com/"
   },
   {
     title: "Medisecure",
     description: "Designed and implemented a secure web-based platform for medical record management, allowing only authorized users to access data. Implemented robust authentication and search features for efficient use.  ",
-    image: "../../../public/other/medisecure.png",
+    image: "./other/medisecure.png",
     link: "https://medi-secure-henna.vercel.app/"
   },
   {
     title: "E-commerce Store",
     description: "An online store built with MERN stack, supporting payments.",
-    image: "../../../public/other/medisecure.png",
+    image: "./other/medisecure.png",
     link: "https://ecommerce-link.com"
   }
 ];
