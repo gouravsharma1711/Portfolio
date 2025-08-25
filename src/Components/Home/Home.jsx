@@ -31,7 +31,29 @@ function Home() {
               I build dynamic, responsive web applications focused on performance, accessibility, and delightful user experiences.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            {/* Social Links */}
+            <div className="flex gap-4 mt-2">
+              <a
+                href="https://github.com/gouravsharma1711"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Profile"
+                className="hover:scale-110 transition-transform text-white text-4xl"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/gourav-sharma-682a8525b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
+                className="hover:scale-110 transition-transform text-white text-4xl"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mt-4">
               <a
                 href="https://drive.google.com/uc?export=download&id=1BRufC4O_HIGveXi7BAL16B60Nd8yf9qn"
                 download
