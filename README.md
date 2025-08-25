@@ -30,11 +30,13 @@ To run this project locally, follow these steps:
 3. **Install dependencies:**
    ```bash
    npm install
+
 4. **create a .env file in root folder and add your emailjs credentials**
   ```bash
     VITE_service_ID=YOUR_SERVICE_ID
     VITE_template_Id=YOUR_TEMPLATE_ID
     VITE_Public_Key=YOUR_PUBLIC_KEY
+
 5. **Start the development server:**
    ```bash
    npm run dev
