@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Video Sharing Website",
     description: "Developed a complete video platform from scratch where users can sign up, create channels, upload videos, and manage their personal dashboard. Features include commenting, liking, and subscribing to channels. Fully functional with secure code practices and a responsive design",
-    image: "./other/videosharingWeb.png",
+    image: "./other/videosharingweb.png",
     link: "https://videosharingplatformfrontend.onrender.com/"
   },
   {
