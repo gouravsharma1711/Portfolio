@@ -37,6 +37,7 @@ To run this project locally, follow these steps:
     VITE_template_Id=YOUR_TEMPLATE_ID
     VITE_Public_Key=YOUR_PUBLIC_KEY
 
-5. **Start the development server:**
+5. **Start the development server**
    ```bash
    npm run dev
+   ```
