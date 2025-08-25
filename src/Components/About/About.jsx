@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import '../Home/Home.css'
+import '../Home/Home.jsx'
 
 function About() {
   return (
