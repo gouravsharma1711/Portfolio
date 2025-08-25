@@ -33,7 +33,7 @@ function Achievements() {
     <main className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-12" id='achievements'>
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20">
         {/* Header */}
-        <header className="text-center space-y-3">
+        <header className="text-center space-y-3 reveal">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Achievements</h1>
           <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
             Highlights of my work, recognition, and community impact.
@@ -43,7 +43,7 @@ function Achievements() {
         {/* Achievements Grid */}
         <ul className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {achievements.map((item, idx) => (
-            <li key={idx} className="group rounded-xl border border-white/10 bg-white/5 p-5 shadow-md transition-transform duration-200 hover:-translate-y-0.5">
+            <li key={idx} className="group rounded-xl border border-white/10 bg-white/5 p-5 shadow-md transition-transform duration-200 hover:-translate-y-0.5 reveal reveal-delay-1">
               <div className="flex items-start gap-4">
                 {/* Icon */}
                 <span aria-hidden className="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20 ring-1 ring-blue-400/30">

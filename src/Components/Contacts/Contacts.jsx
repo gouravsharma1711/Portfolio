@@ -39,7 +39,7 @@ function Contacts() {
         ">
           
           {/* Contact Form Section */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center justify-center animate-fade-in-up">
+          <div className="w-full lg:w-1/2 flex flex-col items-center justify-center reveal">
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 sm:p-10 w-full max-w-lg">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 dark:text-blue-400 mb-4 sm:mb-6 text-center">
                 Contact Me
@@ -70,7 +70,7 @@ function Contacts() {
                 <div>
                   <textarea
                     placeholder="Your Message"
-                    name="message" // Corrected name
+                    name="message"
                     rows="5"
                     required
                     className="w-full px-4 py-3 text-gray-900 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 resize-none"
@@ -93,7 +93,7 @@ function Contacts() {
           </div>
 
           {/* 3D Spline Section */}
-          <div className="hidden lg:flex w-full lg:w-1/2 h-[450px] lg:h-[600px] items-center justify-center animate-fade-in-right ">
+          <div className="hidden lg:flex w-full lg:w-1/2 h-[450px] lg:h-[600px] items-center justify-center reveal-right ">
             <Suspense fallback={<div className="text-center text-blue-600 dark:text-blue-400">Loading 3D Model...</div>}>
               <Spline scene="https://prod.spline.design/tSQaPDVeptv-Xphj/scene.splinecode" />
             </Suspense>
