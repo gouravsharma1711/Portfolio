@@ -41,4 +41,3 @@ To run this project locally, follow these steps:
 5. **Start the development server**
    ```bash
    npm run dev
-   ```
