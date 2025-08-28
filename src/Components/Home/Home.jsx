@@ -1,8 +1,59 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import './home.css';
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 function Home() {
+  // Load 3D component only when needed (desktop and near viewport)
+  const [shouldLoad3D, setShouldLoad3D] = useState(false);
+  const splineContainerRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const MD_BREAKPOINT = 768; // Tailwind's md breakpoint
+
+    // Skip loading 3D on small screens to avoid jank
+    if (window.innerWidth < MD_BREAKPOINT) return;
+
+    // Preconnect to Spline domain to speed up TLS/DNS
+    const link = document.createElement('link');
+    link.rel = 'preconnect';
+    link.href = 'https://prod.spline.design';
+    document.head.appendChild(link);
+
+    // Prefetch Spline module during idle time, so it's ready when we need it
+    const requestIdle =
+      window.requestIdleCallback || function (cb) { return setTimeout(cb, 0); };
+    const cancelIdle =
+      window.cancelIdleCallback || function (id) { clearTimeout(id); };
+    const idleId = requestIdle(() => {
+      import('@splinetool/react-spline');
+    });
+
+    // Mount the 3D component only when the container approaches the viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoad3D(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { root: null, rootMargin: '200px 0px', threshold: 0.1 }
+    );
+
+    if (splineContainerRef.current) {
+      observer.observe(splineContainerRef.current);
+    }
+
+    return () => {
+      try { cancelIdle(idleId); } catch (_) {}
+      try { observer.disconnect(); } catch (_) {}
+      try { document.head.removeChild(link); } catch (_) {}
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 font-inter pt-20" id='home'>
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20">
@@ -76,14 +127,21 @@ function Home() {
             </div>
           </div>
 
-          {/* 3D Component - hidden on small screens, right of text on large screens, below text on tablets */}
-          <div className="hidden md:flex w-full lg:w-[420px] md:w-[360px] justify-center lg:justify-end mt-8 lg:mt-0 reveal-right">
+          {/* 3D Component - load on desktop and when near viewport to reduce lag */}
+          <div
+            ref={splineContainerRef}
+            className="hidden md:flex w-full lg:w-[420px] md:w-[360px] justify-center lg:justify-end mt-8 lg:mt-0 reveal-right"
+          >
             <div className="w-full h-[360px] sm:h-[420px] lg:h-[520px] rounded-2xl overflow-hidden">
-              <Suspense fallback={<div className="flex justify-center items-center text-white">Loading 3D...</div>}>
-                <Spline
-                  scene="https://prod.spline.design/efVrCDtWVO6vKPUi/scene.splinecode"
-                />
-              </Suspense>
+              {shouldLoad3D ? (
+                <Suspense fallback={<div className="flex justify-center items-center text-white">Loading 3D...</div>}>
+                  <Spline scene="https://prod.spline.design/efVrCDtWVO6vKPUi/scene.splinecode" />
+                </Suspense>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-gray-400 bg-black/20">
+                  3D preview loading...
+                </div>
+              )}
             </div>
           </div>
         </div>
