@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+
 import {
   Clock as e,
   PerspectiveCamera as t,
@@ -669,9 +670,7 @@ function createBallpit(e, t = {}) {
   const r = new a();
   let c = false;
 
-  e.style.touchAction = 'none';
-  e.style.userSelect = 'none';
-  e.style.webkitUserSelect = 'none';
+
 
   const h = S({
     domElement: e,
