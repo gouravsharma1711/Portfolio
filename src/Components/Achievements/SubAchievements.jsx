@@ -1,5 +1,6 @@
 import React from "react";
 import ScrollStack, { ScrollStackItem } from "./ScrollStack";
+
 function SubAchievements() {
   const achievements = [
     {
@@ -17,44 +18,44 @@ function SubAchievements() {
     {
       title: "8.0+ CGPA in College",
       detail:
-        "my current cgpa is more than 8 which shows my dedication and hard work towards my studies.",
+        "My current CGPA is more than 8 which shows my dedication and hard work towards my studies.",
       tag: "Achievement",
     },
     {
       title: "Advance Mern Stack Development",
       detail:
-        "I Had completed a mern stack course by PW skills which covered all the advanced concepts",
+        "Completed an advanced MERN stack course by PW Skills covering real-world projects and advanced concepts.",
       tag: "Certification",
     },
     {
-      title: "Dsa In Java",
+      title: "DSA in Java",
       detail:
         "Completed a certification course on Data Structures and Algorithms in Java.",
       tag: "Certification",
     },
   ];
+
   return (
-    <div className="lg:h-[360vh] sm:h-[400vh] h-[400vh] bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100">
-      <h1 id='achievements' className="text-3xl py-5 text-center font-bold reveal">Achievements</h1>
-      
-      <ScrollStack
-        blurAmount={2}
+    <div className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 py-16 sm:py-20 md:py-24">
+      <h1
+        id="achievements"
+        className="text-3xl sm:text-4xl md:text-5xl py-5 text-center font-bold reveal"
       >
+        Achievements
+      </h1>
+
+      <ScrollStack blurAmount={2}>
         {achievements.map((ach, idx) => (
           <ScrollStackItem key={idx}>
-            <div className="relative group rounded-3xl p-[1px] sm:p-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl reveal">
-              <div className="relative overflow-hidden rounded-3xl bg-[#0b1020]/80 backdrop-blur-xl min-h-[160px] sm:min-h-[180px] md:min-h-[220px] p-4 sm:p-6 md:p-8">
-                {/* Gradient blur background accents */}
-
-                <div className="absolute -right-12 -top-12 h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 rounded-full bg-indigo-500/10 blur-2xl md:blur-3xl" />
-
-                <div className="absolute -left-8 -bottom-8 h-28 w-28 sm:h-36 sm:w-36 md:h-40 md:w-40 rounded-full bg-pink-500/10 blur-2xl md:blur-3xl" />
+            <div className="relative group rounded-3xl p-[1px] sm:p-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-xl reveal">
+              <div className="relative overflow-hidden rounded-3xl bg-[#0b1020]/80 backdrop-blur-xl min-h-[200px] sm:min-h-[240px] md:min-h-[260px] lg:min-h-[280px] p-4 sm:p-6 md:p-8">
+                {/* Decorative Blurs */}
+                <div className="absolute -right-10 -top-10 h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40 rounded-full bg-indigo-500/10 blur-2xl md:blur-3xl" />
+                <div className="absolute -left-8 -bottom-8 h-20 w-20 sm:h-28 sm:w-28 md:h-36 md:w-36 rounded-full bg-pink-500/10 blur-2xl md:blur-3xl" />
 
                 {/* Content */}
-
-                <div className="relative z-10 flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
+                <div className="relative z-10 flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                   {/* Icon */}
-
                   <div className="flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg ring-1 ring-white/10">
                     <span className="text-xl sm:text-2xl md:text-3xl">
                       {ach.tag === "Achievement" ? "🏆" : "📜"}
@@ -62,13 +63,11 @@ function SubAchievements() {
                   </div>
 
                   {/* Text */}
-
                   <div className="min-w-0 flex-1">
                     <div className="mb-2 sm:mb-3 flex flex-wrap items-center gap-2 sm:gap-3">
                       <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white">
                         {ach.title}
                       </h2>
-
                       <span
                         className={`inline-flex items-center rounded-full px-2.5 sm:px-3 py-0.5 sm:py-1 text-[11px] sm:text-xs md:text-sm font-medium ring-1 ring-inset ${
                           ach.tag === "Achievement"
@@ -79,7 +78,6 @@ function SubAchievements() {
                         {ach.tag}
                       </span>
                     </div>
-
                     <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">
                       {ach.detail}
                     </p>

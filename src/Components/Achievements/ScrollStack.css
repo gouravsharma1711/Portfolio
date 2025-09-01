@@ -1,41 +1,23 @@
-.scroll-stack-scroller {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: visible;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: scroll-position;
-  scrollbar-width: none;
-}
-
 .scroll-stack-inner {
-  min-height: 250vh;
-}
-
-.scroll-stack-card-wrapper {
-  position: relative;
+  min-height: 300vh; /* smaller for better responsiveness */
 }
 
 .scroll-stack-card {
-  transform-origin: top center;
-  margin: 120px 0;
+  position: relative;
+  width: 100%;
+  max-width: 48rem; /* center cards on large screens */
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: transparent;
   will-change: transform, filter;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  height: 20rem;
-  width: 100%;
-  padding: 3rem;
-  border-radius: 40px;
-  box-sizing: border-box;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  position: relative;
+  transition: transform 0.2s ease-out;
+}
+
+.scroll-stack-card:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .scroll-stack-end {
