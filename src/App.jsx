@@ -11,7 +11,7 @@ function App() {
       <NavBar/>
       <Home/>
       <About/>
-      <Achievements/>
+      <Achievements />
       <Projects/>
       <Education/>
       <Contacts/>

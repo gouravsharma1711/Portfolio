@@ -3,15 +3,20 @@
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { font-family: 'Inter', sans-serif; }
 
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; will-change: opacity, transform; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
-.reveal-right { opacity: 0; transform: translateX(24px); transition: opacity .8s ease, transform .8s ease; }
+.reveal-right { opacity: 0; transform: translateX(24px); transition: opacity .8s ease, transform .8s ease; will-change: opacity, transform; }
 .reveal-right.is-visible { opacity: 1; transform: none; }
 
-.reveal-left { opacity: 0; transform: translateX(-24px); transition: opacity .8s ease, transform .8s ease; }
+.reveal-left { opacity: 0; transform: translateX(-24px); transition: opacity .8s ease, transform .8s ease; will-change: opacity, transform; }
 .reveal-left.is-visible { opacity: 1; transform: none; }
 
 .reveal-delay-1 { transition-delay: .1s; }
 .reveal-delay-2 { transition-delay: .2s; }
 .reveal-delay-3 { transition-delay: .3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal-right, .reveal-left { transition: none; transform: none !important; opacity: 1 !important; }
+}

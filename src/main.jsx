@@ -5,6 +5,9 @@ import App from './App.jsx'
 
 function ScrollAnimator() {
   useEffect(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)')?.matches
+    if (prefersReduced) return
+
     const els = document.querySelectorAll('.reveal, .reveal-right, .reveal-left')
     const obs = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -13,7 +16,8 @@ function ScrollAnimator() {
           obs.unobserve(entry.target)
         }
       })
-    }, { threshold: 0.15 })
+    }, { threshold: 0.15, rootMargin: '100px 0px' })
+
     els.forEach((el) => obs.observe(el))
     return () => obs.disconnect()
   }, [])
