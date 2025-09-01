@@ -8,6 +8,8 @@ function Home() {
   // Load 3D component only when needed (desktop and near viewport)
   const [shouldLoad3D, setShouldLoad3D] = useState(false);
   const splineContainerRef = useRef(null);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const ballCount = isMobile ? 25 : 90;
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -74,12 +76,12 @@ function Home() {
         }}
       >
         <Ballpit
-          count={25}
+          count={ballCount}
           gravity={0.01}
           friction={0.99}
           wallBounce={0.95}
-          followCursor={true}
-          colors={["red", "#8b5cf6", "purple"]}
+          followCursor={!isMobile}
+          colors={["#FFFFFF", "#8b5cf6", "#22d3ee"]}
         />
       </div>
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20 relative z-10">
@@ -91,6 +93,8 @@ function Home() {
                 alt="Gourav Sharma profile"
                 className="w-full h-full object-cover"
                 loading="eager"
+                decoding="async"
+                fetchpriority="high"
               />
             </div>
           </div>

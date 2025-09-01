@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollStack, { ScrollStackItem } from "./ScrollStack";
-function Random() {
+function SubAchievements() {
   const achievements = [
     {
       title: "Runners Ups in Hack For Imapact",
@@ -34,14 +34,15 @@ function Random() {
     },
   ];
   return (
-    <div className="lg:h-[360vh] sm:h-[400vh] h-[400vh]  bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 border border-black">
+    <div className="lg:h-[360vh] sm:h-[400vh] h-[400vh] bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100">
+      <h1 id='achievements' className="text-3xl py-5 text-center font-bold reveal">Achievements</h1>
+      
       <ScrollStack
-        id="achievements"
         blurAmount={2}
       >
         {achievements.map((ach, idx) => (
           <ScrollStackItem key={idx}>
-            <div className="relative group rounded-3xl p-[1px] sm:p-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl ">
+            <div className="relative group rounded-3xl p-[1px] sm:p-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl reveal">
               <div className="relative overflow-hidden rounded-3xl bg-[#0b1020]/80 backdrop-blur-xl min-h-[160px] sm:min-h-[180px] md:min-h-[220px] p-4 sm:p-6 md:p-8">
                 {/* Gradient blur background accents */}
 
@@ -93,4 +94,4 @@ function Random() {
   );
 }
 
-export default Random;
+export default SubAchievements;

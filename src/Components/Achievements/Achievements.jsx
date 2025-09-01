@@ -1,5 +1,5 @@
 import React from 'react';
-import Random from './Random';
+import SubAchievements from './SubAchievements';
 function Achievements({onStackComplete}) {
   const achievements = [
     {
@@ -28,9 +28,11 @@ function Achievements({onStackComplete}) {
       tag: 'Certification',
     },
   ];
-
   return (
-    <Random />
+
+    <>
+      <SubAchievements/>
+    </>
   );
 }
 

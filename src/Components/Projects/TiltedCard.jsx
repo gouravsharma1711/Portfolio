@@ -52,6 +52,8 @@ function TiltedCard({project}) {
             src={project.image}
             alt={project.title}
             className="w-full h-48 sm:h-56 object-cover "
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="relative p-6 flex flex-col flex-1">

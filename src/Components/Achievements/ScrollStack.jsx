@@ -23,6 +23,7 @@ const ScrollStack = ({
   const cardsRef = useRef([]);
   const lastTransformsRef = useRef(new Map());
   const isUpdatingRef = useRef(false);
+  const nativeScrollAttachedRef = useRef(false);
 
   const calculateProgress = useCallback((scrollTop, start, end) => {
     if (scrollTop < start) return 0;
@@ -132,20 +133,31 @@ const ScrollStack = ({
     if (lenisRef.current) {
         lenisRef.current.destroy();
     }
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)')?.matches;
+    const isMobile = window.innerWidth < 768;
+
+    if (prefersReduced || isMobile) {
+      // Fall back to native scroll on mobile or reduced motion
+      if (!nativeScrollAttachedRef.current) {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        nativeScrollAttachedRef.current = true;
+      }
+      return;
+    }
+
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.1,
       easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      touchMultiplier: 2,
+      touchMultiplier: 1.5,
       infinite: false,
-      gestureOrientationHandler: true,
       normalizeWheel: true,
-      wheelMultiplier: 1,
-      touchInertiaMultiplier: 35,
-      lerp: 0.07, // Decreased lerp for a snappier feel
+      wheelMultiplier: 0.9,
+      lerp: 0.08,
       syncTouch: true,
-      syncTouchLerp: 0.075,
-      touchInertia: 0.6
+      syncTouchLerp: 0.08,
+      touchInertia: 0.55
     });
 
     lenis.on('scroll', handleScroll);
@@ -190,6 +202,10 @@ const ScrollStack = ({
       }
       if (lenisRef.current) {
         lenisRef.current.destroy();
+      }
+      if (nativeScrollAttachedRef.current) {
+        window.removeEventListener('scroll', handleScroll);
+        nativeScrollAttachedRef.current = false;
       }
       cardsRef.current = [];
       transformsCache.clear();

@@ -26,7 +26,7 @@ function Education() {
     <main className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-8" id='education'>
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20">
         {/* Header */}
-        <header className="text-center space-y-3">
+        <header className="text-center space-y-3 reveal">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Education</h1>
           <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
             A snapshot of my academic journey and milestones.
@@ -39,7 +39,7 @@ function Education() {
           <div className="order-2 lg:order-1">
             <ol className="relative border-s border-white/10 pl-6">
               {education.map((item, idx) => (
-                <li key={idx} className="relative mb-10 ms-4">
+                <li key={idx} className={`relative mb-10 ms-4 ${idx % 2 === 0 ? 'reveal-left' : 'reveal-right'}`}>
                   {/* Marker */}
                   <span aria-hidden className="absolute -left-3 flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 ring-4 ring-blue-600/30" />
 

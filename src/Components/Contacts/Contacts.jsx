@@ -35,8 +35,7 @@ function Contacts() {
     <>
       <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 px-4 py-8 md:p-8 font-inter">
         
-        <div className="w-full max-w-7xl flex flex-col lg:flex-row-reverse items-center justify-between gap-4 lg:gap-4
-        ">
+        <div className="w-full max-w-7xl flex flex-col lg:flex-row-reverse items-center justify-between gap-4 lg:gap-4">
           
           {/* Contact Form Section */}
           <div className="w-full lg:w-1/2 flex flex-col items-center justify-center reveal">
