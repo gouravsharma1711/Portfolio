@@ -1,14 +1,11 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import "./home.css";
-const Spline = React.lazy(() => import("@splinetool/react-spline"));
-import Ballpit from "./Ballpit.jsx";
-
 
 function Home() {
   // Load 3D component only when needed (desktop and near viewport)
   const [shouldLoad3D, setShouldLoad3D] = useState(false);
   const splineContainerRef = useRef(null);
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
   const ballCount = isMobile ? 25 : 90;
 
   useEffect(() => {
@@ -63,7 +60,10 @@ function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 font-inter pt-20 relative" id='home'>
+    <main
+      className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 font-inter pt-20 relative"
+      id="home"
+    >
       <div
         style={{
           position: "absolute",
@@ -74,40 +74,28 @@ function Home() {
           zIndex: 1, // Place behind the content
           pointerEvents: "none", // Allow clicks to pass through to the content
         }}
-      >
-        <Ballpit
-          count={ballCount}
-          gravity={0.01}
-          friction={0.99}
-          wallBounce={0.95}
-          followCursor={!isMobile}
-          colors={["#FFFFFF", "#8b5cf6", "#22d3ee"]}
-        />
-      </div>
+      ></div>
+
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 md:gap-8">
-          <div className="md:hidden w-full flex items-center justify-center mb-6 reveal">
-            <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full imageDiv">
-              <img
-                src="/Profile/profile.png"
-                alt="Gourav Sharma profile"
-                className="w-full h-full object-cover"
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-              />
-            </div>
-          </div>
+        <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-8 md:gap-8">
           {/* Text content */}
-          <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start gap-6 md:gap-7 reveal">
+          <div className="w-full md:w-1/2 flex-1 text-center md:text-left flex flex-col items-center md:items-start gap-6 md:gap-7 reveal">
             <div className="space-y-2">
-              <p className="text-base md:text-lg font-light text-gray-400">Hello, I'm</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Gourav Sharma</h1>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-900">MERN Stack Developer</h2>
+              <p className="text-base md:text-lg font-light text-gray-400">
+                Hello, I'm
+              </p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+                Gourav Sharma
+              </h1>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-900">
+                MERN Stack Developer
+              </h2>
             </div>
             <p className="text-sm sm:text-base md:text-lg text-white leading-relaxed max-w-2xl">
-              I build dynamic, responsive web applications focused on performance, accessibility, and delightful user experiences.
+              I build dynamic, responsive web applications focused on
+              performance, accessibility, and delightful user experiences.
             </p>
+
             {/* Social Links */}
             <div className="flex gap-4 mt-2">
               <a
@@ -129,6 +117,7 @@ function Home() {
                 <i className="fa-brands fa-linkedin"></i>
               </a>
             </div>
+
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mt-4">
               <a
                 href="https://drive.google.com/uc?export=download&id=1BRufC4O_HIGveXi7BAL16B60Nd8yf9qn"
@@ -146,25 +135,23 @@ function Home() {
                 Contact Info
               </a>
             </div>
+
             <div className="text-xs sm:text-sm text-grey-400">
               Available for freelance and full-time opportunities.
             </div>
           </div>
-          {/* 3D Component - load on desktop and when near viewport to reduce lag */}
-          <div
-            ref={splineContainerRef}
-            className="hidden md:flex w-full lg:w-[420px] md:w-[360px] justify-center lg:justify-end mt-8 lg:mt-0 reveal-right"
-          >
-            <div className="w-full h-[360px] sm:h-[420px] lg:h-[520px] rounded-2xl overflow-hidden">
-              {shouldLoad3D ? (
-                <Suspense fallback={<div className="flex justify-center items-center text-white">Loading 3D...</div>}>
-                  <Spline scene="https://prod.spline.design/efVrCDtWVO6vKPUi/scene.splinecode" />
-                </Suspense>
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-gray-400 bg-black/20">
-                  3D preview loading...
-                </div>
-              )}
+
+          {/* Image content */}
+          <div className="w-full md:w-1/2 flex items-center justify-center mb-6 reveal">
+            <div className="relative sm:w-[25rem] sm:h-[25rem] w-[10rem] h-[10rem] rounded-full imageDiv">
+              <img
+                src="/Profile/profile.png"
+                alt="Gourav Sharma profile"
+                className="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
             </div>
           </div>
         </div>
