@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './navBar.css';
-
 function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [mode, setMode] = useState('light'); // Added missing mode state
@@ -23,7 +22,7 @@ function NavBar() {
                         className="flex items-center space-x-3 rtl:space-x-reverse"
                     >
                         <div className="navBarLogoImage">
-                            <img src="../../../public/logo/logo.png" className="logoImage" alt="Logo" /> {/* Fixed image path */}
+                            <img src="/logo/logo.png" className="logoImage" alt="Logo" /> {/* Fixed image path */}
                         </div>
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Gourav</span>
                     </a>
