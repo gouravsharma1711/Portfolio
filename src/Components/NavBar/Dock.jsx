@@ -100,7 +100,7 @@ export default function Dock({
   };
 
   return (
-    <div className="w-[calc(100%-2rem)]  flex justify-center fixed z-50 bottom-10 ">
+    <div className="w-[calc(100%-2rem)]  flex justify-center fixed z-50 top-10 ">
       <div
         ref={dockRef}
         onMouseMove={handleMouseMove}
