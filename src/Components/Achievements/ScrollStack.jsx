@@ -167,7 +167,7 @@ const ScrollStack = ({
 
   return (
     <div
-      className={`scroll-stack-container relative  ${className}`.trim()}
+      className={`scroll-stack-container relative   ${className} `.trim()}
       ref={containerRef}
     >
       <div className="scroll-stack-inner ">{children}<div className="scroll-stack-end" /></div>

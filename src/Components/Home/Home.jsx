@@ -61,7 +61,7 @@ function Home() {
 
   return (
     <main
-      className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 font-inter pt-20 relative"
+      className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 font-inter pt-20 relative overflow-x-hidden"
       id="home"
     >
       <div

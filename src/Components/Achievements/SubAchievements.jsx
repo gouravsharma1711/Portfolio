@@ -36,7 +36,7 @@ function SubAchievements() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 py-16 sm:py-20 md:py-24">
+    <div className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 py-16 sm:pt-20 sm:pb-48 md:pt-24 md:pb-64 lg:pt-20 lg:pb-78 pb-20 overflow-x-hidden">
       <h1
         id="achievements"
         className="text-3xl sm:text-4xl md:text-5xl py-5 text-center font-bold reveal"

@@ -19,20 +19,12 @@ const projects = [
     image: "./other/medisecure.png",
     link: "https://medi-secure-henna.vercel.app/",
   },
-  {
-    index:3,
-    title: "Hotel Listings Application",
-    description:
-      "Built a full-featured application for hotel listings and reviews, including user authentication, advanced search, and responsive UI.",
-    image: "./other/hotelListingWeb.png",
-    link: "https://github.com/gouravsharma1711/Hotel-Listing-Website",
-  },
 ];
 
 function Projects() {
   return (
     <main
-      className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-12"
+      className="min-h-screen bg-gradient-to-b  from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-12"
       id="projects"
     >
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20">
@@ -41,7 +33,7 @@ function Projects() {
             My Projects
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
-            Some of the products I’ve built and shipped.
+            Some of the Projects I’ve built.
           </p>
         </header>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
