@@ -120,7 +120,7 @@ function Home() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mt-4">
               <a
-                href="https://drive.google.com/uc?export=download&id=1BRufC4O_HIGveXi7BAL16B60Nd8yf9qn"
+                href={import.meta.env.VITE_Resume_Link}
                 download
                 className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm md:text-base font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 active:scale-[.99] transition-transform duration-200"
                 aria-label="Download CV"
