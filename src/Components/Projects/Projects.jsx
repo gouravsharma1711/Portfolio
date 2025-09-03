@@ -30,10 +30,10 @@ function Projects() {
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20">
         <header className="text-center space-y-3 reveal">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-            My Projects
+            My Projects 🎨
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
-            Some of the Projects I’ve built.
+            Some of the Projects  I’ve built.
           </p>
         </header>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

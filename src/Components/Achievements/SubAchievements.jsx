@@ -69,7 +69,7 @@ function SubAchievements() {
           id="achievements"
           className="text-4xl md:text-5xl lg:text-6xl text-center font-extrabold text-white mb-16 animate-fade-in drop-shadow-lg"
         >
-          My Stellar Journey 🚀
+          My Achievement 🚀
         </h1>
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 perspective-1000">
           {achievements.map((ach, idx) => (

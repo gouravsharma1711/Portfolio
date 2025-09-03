@@ -27,7 +27,7 @@ function Education() {
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20">
         {/* Header */}
         <header className="text-center space-y-3 reveal">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Education</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Education 🏫</h1>
           <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
             A snapshot of my academic journey and milestones.
           </p>
