@@ -23,7 +23,7 @@ function Education() {
   ];
 
   return (
-    <main className="min-h-screen  bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-8" id='education'>
+    <main className="min-h-1/2  bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-8" id='education'>
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20">
         {/* Header */}
         <header className="text-center space-y-3 reveal">

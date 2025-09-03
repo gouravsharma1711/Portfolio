@@ -1,5 +1,5 @@
 .scroll-stack-inner {
-  min-height: 300vh; /* smaller for better responsiveness */
+  min-height: 175vh;
 }
 
 .scroll-stack-card {

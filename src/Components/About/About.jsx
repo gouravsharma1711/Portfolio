@@ -3,7 +3,7 @@ import React, { Suspense } from 'react';
 function About() {
   return (
     <main
-      className="min-h-screen bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-12 overflow-x-hidden"
+      className="min-h-1/2 bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-12 overflow-x-hidden"
       id="about"
     >
       <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 py-10 md:py-16">

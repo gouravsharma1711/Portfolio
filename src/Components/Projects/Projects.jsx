@@ -24,7 +24,7 @@ const projects = [
 function Projects() {
   return (
     <main
-      className="min-h-screen bg-gradient-to-b  from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-12"
+      className="min-h-1/2 bg-gradient-to-b  from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-12"
       id="projects"
     >
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20">
