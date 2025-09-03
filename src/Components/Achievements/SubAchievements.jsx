@@ -58,7 +58,7 @@ function SubAchievements() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-[#0a0a1f] to-[#0f172a] text-gray-100 py-20 sm:py-28 min-h-screen relative overflow-hidden">
+    <div className="bg-gradient-to-br from-[#0a0a1f] to-[#0f172a] text-gray-100 py-20 sm:py-28 min-h-1/2 relative overflow-hidden">
       {/* Background Orbs/Blobs for extra flair */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-600/15 rounded-full filter blur-3xl opacity-50 animate-blob" />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-pink-600/15 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-2000" />
