@@ -1,5 +1,6 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./home.css";
+import TextType from './TextType';
 
 function Home() {
   // Load 3D component only when needed (desktop and near viewport)
@@ -61,7 +62,7 @@ function Home() {
 
   return (
     <main
-      className="min-h-1/2 bg-gradient-to-b from-[#0a0a1f] to-[#0f172a] text-gray-100 font-inter pt-20 relative overflow-x-hidden"
+      className="min-h-1/2  text-gray-100 font-inter pt-20 relative overflow-x-hidden"
       id="home"
     >
       <div
@@ -87,8 +88,24 @@ function Home() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
                 Gourav Sharma
               </h1>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-900">
-                MERN Stack Developer
+              <h2 className="text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-gradient-x">
+                <TextType
+                text={[
+                  "Full-Stack Developer ",
+                  "Web Developer ",
+                  "Frontend Developer",
+                  "Backend Developer ",
+                  "Software Engineer",
+                  "Computer Science Student",
+                  "Problem Solver ",
+                ]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={true}
+                cursorCharacter="|"
+                textColors={"red"}
+                deletingSpeed={50}
+              />
               </h2>
             </div>
             <p className="text-sm sm:text-base md:text-lg text-white leading-relaxed max-w-2xl">
@@ -145,7 +162,7 @@ function Home() {
           <div className="w-full md:w-1/2 flex items-center justify-center mb-6 reveal">
             <div className="relative sm:w-[25rem] sm:h-[25rem] w-[10rem] h-[10rem] rounded-full imageDiv">
               <img
-                src="/Profile/profile.png"
+                src="https://res.cloudinary.com/dgavuxx13/image/upload/v1757421504/profile_yr2b4j.png"
                 alt="Gourav Sharma profile"
                 className="w-full h-full object-cover"
                 loading="eager"

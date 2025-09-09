@@ -1,17 +1,4 @@
-@keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInRight {
-          from { opacity: 0; transform: translateX(20px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 1s ease-out;
-        }
-        .animate-fade-in-right {
-          animation: fadeInRight 1s ease-out;
-        }
-        .font-inter {
-          font-family: 'Inter', sans-serif;
-        }
+.contact-details{
+  background-image: url("https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg");
+  background-size: cover;
+}

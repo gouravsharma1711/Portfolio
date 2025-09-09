@@ -8,7 +8,7 @@ const projects = [
     title: "Video Sharing Platform",
     description:
       "Developed a complete video platform from scratch where users can sign up, create channels, upload videos, and manage their personal dashboard. Features include commenting, liking, and subscribing to channels. Fully functional with secure code practices and a responsive design.",
-    image: "./other/videosharingweb.png",
+    image: "https://res.cloudinary.com/dgavuxx13/image/upload/v1757421503/videosharingweb_kf2zmd.png",
     link: "https://videosharingplatformfrontend.onrender.com/",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     title: "Medisecure",
     description:
       "Designed and implemented a secure web-based platform for medical record management, allowing only authorized users to access data. Implemented robust authentication and search features for efficient use.",
-    image: "./other/medisecure.png",
+    image: "https://res.cloudinary.com/dgavuxx13/image/upload/v1757421501/medisecure_mubseh.png",
     link: "https://medi-secure-henna.vercel.app/",
   },
 ];
@@ -24,7 +24,7 @@ const projects = [
 function Projects() {
   return (
     <main
-      className="min-h-1/2 bg-gradient-to-b  from-[#0a0a1f] to-[#0f172a] text-gray-100 pt-12"
+      className="min-h-1/2  text-gray-100 pt-12"
       id="projects"
     >
       <section className="mx-auto w-full max-w-7xl px-6 sm:px-8 py-14 md:py-20">

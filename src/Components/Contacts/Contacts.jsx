@@ -36,7 +36,7 @@ function Contacts() {
   return (
     <section
       id="contact"
-      className="min-h-1/2 flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 px-4 py-8 md:p-8 font-inter"
+      className="min-h-1/2 flex flex-col items-center justify-center  px-4 py-8 md:p-8 font-inter"
     >
       <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-6">
         
