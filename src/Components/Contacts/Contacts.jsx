@@ -42,7 +42,7 @@ function Contacts() {
         
         {/* Contact Form Section */}
         <div className="w-full flex flex-col items-center justify-center reveal">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 sm:p-10 w-full max-w-lg">
+          <div className="bg-gray-800 rounded-2xl shadow-2xl p-6 sm:p-10 w-full max-w-lg">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 dark:text-blue-400 mb-4 sm:mb-6 text-center">
               Contact Me
             </h1>
