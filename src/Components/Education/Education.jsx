@@ -5,19 +5,16 @@ function Education() {
     {
       title: "Bachelor of Technology in Computer Science",
       place: "Maharaja Agrasen Institute of Technology (MAIT), GGSIPU",
-      period: "2022 - 2026",
       detail: "In the field of Computer Science And Engineering",
     },
     {
       title: "Higher Secondary Education",
       place: "B.M Bharti Model School",
-      period: "2019 - 2020",
       detail: "Specialized in Science Stream",
     },
     {
       title: "Secondary Education",
       place: "B.M Bharti Model School",
-      period: "2017 - 2018",
       detail: "Completed Secondary Education with a focus on Science.",
     },
   ];
@@ -89,9 +86,6 @@ function Education() {
                     <div className="mt-3 flex flex-wrap gap-2 text-xs sm:text-sm">
                       <span className="inline-flex items-center rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-blue-300">
                         {item.place}
-                      </span>
-                      <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-3 py-1 text-gray-300">
-                        {item.period}
                       </span>
                     </div>
 
