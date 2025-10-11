@@ -162,7 +162,7 @@ function Home() {
           <div className="w-full md:w-1/2 flex items-center justify-center mb-6 reveal">
             <div className="relative sm:w-[25rem] sm:h-[25rem] w-[10rem] h-[10rem] rounded-full imageDiv">
               <img
-                src="https://res.cloudinary.com/dgavuxx13/image/upload/v1757421504/profile_yr2b4j.png"
+                src="../../public/Profile/profile.png"
                 alt="Gourav Sharma profile"
                 className="w-full h-full object-cover"
                 loading="eager"
