@@ -8,7 +8,7 @@ const projects = [
     title: "Video Sharing Platform",
     description:
       "Developed a complete video platform from scratch where users can sign up, create channels, upload videos, and manage their personal dashboard. Features include commenting, liking, and subscribing to channels. Fully functional with secure code practices and a responsive design.",
-    image: "https://res.cloudinary.com/dgavuxx13/image/upload/v1757421503/videosharingweb_kf2zmd.png",
+    image: "../../public/other/videosharingweb.png",
     link: "https://videosharingplatformfrontend.onrender.com/",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     title: "Medisecure",
     description:
       "Designed and implemented a secure web-based platform for medical record management, allowing only authorized users to access data. Implemented robust authentication and search features for efficient use.",
-    image: "https://res.cloudinary.com/dgavuxx13/image/upload/v1757421501/medisecure_mubseh.png",
+    image: "h../../public/other/medisecure.png",
     link: "https://medi-secure-henna.vercel.app/",
   },
 ];
