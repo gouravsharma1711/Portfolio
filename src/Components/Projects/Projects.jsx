@@ -17,7 +17,7 @@ const projects = [
     description:
       "Designed and implemented a secure web-based platform for medical record management, allowing only authorized users to access data. Implemented robust authentication and search features for efficient use.",
     image: "h../../public/other/medisecure.png",
-    link: "https://medi-secure-henna.vercel.app/",
+    link: "https://med1plus-frontend.onrender.com/",
   },
 ];
 
