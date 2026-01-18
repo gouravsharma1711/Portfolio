@@ -13,7 +13,7 @@ const projects = [
   },
   {
     index:2,
-    title: "Medisecure",
+    title: "Med1 Plus",
     description:
       "Designed and implemented a secure web-based platform for medical record management, allowing only authorized users to access data. Implemented robust authentication and search features for efficient use.",
     image: "h../../public/other/medisecure.png",
