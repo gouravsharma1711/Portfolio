@@ -1,23 +1,28 @@
-import React, { Suspense, lazy } from 'react';
-import NavBar from './Components/NavBar/NavBar';
-import Home from './Components/Home/Home.jsx';
-import About from './Components/About/About';
-import Achievements from './Components/Achievements/Achievements'
-import Education from './Components/Education/Education'
-import Contacts from './Components/Contacts/Contacts'
-import Projects from './Components/Projects/Projects'
+import { useRevealOnScroll } from './hooks/useRevealOnScroll';
+import { Header } from './components/layout/Header';
+import { Hero } from './components/sections/Hero';
+import { Experience } from './components/sections/Experience';
+import { Projects } from './components/sections/Projects';
+import { Profile } from './components/sections/Profile';
+import { Milestones } from './components/sections/Milestones';
+import { Resume } from './components/sections/Resume';
+import { Contact } from './components/sections/Contact';
 
 function App() {
-  return (
-    <div className='bg-gradient-to-br from-[#0a0a1f] via-[#0f172a] to-[#0b1020]'>
-      <NavBar />
-      <Home />
-      <About/>
-      <Achievements />
-      <Projects/>
-      <Education/>
-      <Contacts/>
-    </div>
-  );
+  useRevealOnScroll();
+
+  return <div className="site-shell">
+    <Header />
+    <main id="top">
+      <Hero />
+      <Experience />
+      <Projects />
+      <Profile />
+      <Milestones />
+      <Resume />
+      <Contact />
+    </main>
+  </div>;
 }
+
 export default App;
